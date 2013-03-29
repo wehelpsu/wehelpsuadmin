@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   end
   private
     def current_user_session
+      logger.debug "things going wr8"
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find
     end
