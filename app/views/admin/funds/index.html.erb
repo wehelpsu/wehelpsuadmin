@@ -1,0 +1,33 @@
+<h1>Listing admin_funds</h1>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>Funded date</th>
+    <th>Amount</th>
+    <th>User</th>
+    <th>Updated user</th>
+    <th>Updated user type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_funds.each do |admin_fund| %>
+  <tr>
+    <td><%= admin_fund.user_name %></td>
+    <td><%= admin_fund.Funded_date %></td>
+    <td><%= admin_fund.amount %></td>
+    <td><%= admin_fund.user %></td>
+    <td><%= admin_fund.updated_user_id %></td>
+    <td><%= admin_fund.updated_user_type %></td>
+    <td><%= link_to 'Show', admin_fund_path(admin_fund) %></td>
+    <td><%= link_to 'Edit', edit_admin_fund_path(admin_fund) %></td>
+    <td><%= link_to 'Destroy', admin_fund_path(admin_fund), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fund', new_admin_fund_path %>

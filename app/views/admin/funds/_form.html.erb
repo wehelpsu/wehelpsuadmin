@@ -1,0 +1,14 @@
+<%= semantic_form_for(@fund,:url=>admin_funds_url) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :user_name %>
+    <%= f.input :funded_date %>
+    <%= f.input :amount %>
+    <%= f.input :user_id %>
+    <%= f.input :updated_user_id %>
+    <%= f.input :updated_user_type %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

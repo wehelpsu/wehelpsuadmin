@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+	<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<%= form_for @user, :as => :post, :url => admin_mailer_index_path, :method => :post do |f| %>
+  	Subject:<input type="text" name="subject"/><br /> 
+	Body: <textarea rows="4" cols="50" name="body"></textarea><br />
+  	
+  	<%@users.each do |user| %>
+		<input type="checkbox" name ="user_ids[]" value = <%=user.id%>>
+		<%=user.username%><br />
+		
+	<%end%>
+	<br/>
+	<%=f.submit :value => "send mail"%>
+<% end %>

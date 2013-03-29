@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Expence name:</b>
+  <%= @admin_expence.expence_name %>
+</p>
+
+<p>
+  <b>Expence date:</b>
+  <%= @admin_expence.expence_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @admin_expence.amount %>
+</p>
+
+<p>
+  <b>Given by name:</b>
+  <%= @admin_expence.given_by_name %>
+</p>
+
+<p>
+  <b>Bill no:</b>
+  <%= @admin_expence.bill_no %>
+</p>
+
+<p>
+  <b>Place of purchase:</b>
+  <%= @admin_expence.place_of_purchase %>
+</p>
+
+<p>
+  <b>Updated user:</b>
+  <%= @admin_expence.updated_user_id %>
+</p>
+
+<p>
+  <b>Updated user type:</b>
+  <%= @admin_expence.updated_user_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_expence_path(@admin_expence) %> |
+<%= link_to 'Back', admin_expences_path %>

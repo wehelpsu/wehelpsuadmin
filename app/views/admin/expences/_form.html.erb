@@ -1,0 +1,16 @@
+<%= semantic_form_for(@expence,:url=>admin_expences_url)  do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :expence_name %>
+    <%= f.input :expence_date %>
+    <%= f.input :amount %>
+    <%= f.input :given_by_name %>
+    <%= f.input :bill_no %>
+    <%= f.input :place_of_purchase %>
+    <%= f.input :updated_user_id %>
+    <%= f.input :updated_user_type %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

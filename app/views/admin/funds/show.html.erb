@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User name:</b>
+  <%= @admin_fund.user_name %>
+</p>
+
+<p>
+  <b>Funded date:</b>
+  <%= @admin_fund.Funded_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @admin_fund.amount %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @admin_fund.user %>
+</p>
+
+<p>
+  <b>Updated user:</b>
+  <%= @admin_fund.updated_user_id %>
+</p>
+
+<p>
+  <b>Updated user type:</b>
+  <%= @admin_fund.updated_user_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_fund_path(@admin_fund) %> |
+<%= link_to 'Back', admin_funds_path %>
